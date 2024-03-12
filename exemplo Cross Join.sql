@@ -117,4 +117,16 @@ select c.id, c.nome, p.id, p.data_pedido, p.cliente_id
 from clientes c
  left join pedidos p on c.id = p.cliente_id;
  
-/* aqui, estamos selecionando todos os registros da tabela clientes e os res
+/* aqui, estamos selecionando todos os registros da tabela clientes e os registros 
+correspondentes da tabela pedidos, se houver, com base na correspondencia de id e cliente_id
+*/
+
+/*RIGTH join: Retorna todos os registros da tabela da direita  (segunda tabela mencionada) e os registros
+correspondentes da tabela da esquerda(primeira tabela mencionada).*/
+
+select c.id, c.nome, p.id, p. data_pedido p.cliente_id
+from clientes c 
+rigth join pedidos p on c.id = p.cliente_id;
+
+/* este comando retorna todos os registros da tabela pedidos e os registros correspondentes da tabela clientes, se houver, com base na correspondencia
+de id e cliente_id*/
